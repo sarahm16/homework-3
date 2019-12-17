@@ -16,36 +16,18 @@
 
     <h2>Generate a Password</h2>
 
-    <form>
-        What is the length of the password? <br>
-        <input type = "text" id = "length"> <br>
-        Contain special characters? <br>
-        <input type = "radio" name = "special" value = "yes">Yes
-        <input type = "radio" name = "special" value = "no">No <br>
-        Contain numeric characters? <br>
-        <input type = "radio" name = "numeric" value = "yes">Yes
-        <input type = "radio" name = "numeric" value = "no">No <br>
-        Contain lowercase characters? <br>
-        <input type = "radio" name = "lowercase" value = "yes">Yes
-        <input type = "radio" name = "lowercase" value = "no">No <br>
-        Contain uppercase characters? <br>
-        <input type = "radio" name = "uppercase" value = "yes">Yes
-        <input type = "radio" name = "uppercase" value = "no">No
-    </form>
-
-    <br>
-
-    <textarea
+    <div class = "wrapper">
+      <textarea
       readonly
       id="password"
       placeholder="Your Secure Password"
-      aria-label="Generated Password"
-    ></textarea>
+      aria-label="Generated Password"></textarea>
     <br>
-    <button id="generate">Generate Password</button>
-    <button id="copy">
-      Copy to Clipboard
-    </button>
+      <button id="generate">Generate Password</button>
+      <button id="copy">
+        Copy to Clipboard
+      </button>
+    </div>
 
     <script src = "script.js"></script>
   </body>

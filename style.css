@@ -1,5 +1,5 @@
 body {
-    background-image: url('circles-light.png');
+    background-image: url('shapeline.jpg');
 }
 
 h1 {
@@ -16,7 +16,7 @@ h1 {
 }
 
 .wrapper {
-    width: 400px;
+    width: 500px;
     padding-top: 10px;
     padding-bottom: 20px;
     margin: 0 auto;

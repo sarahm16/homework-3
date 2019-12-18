@@ -21,6 +21,8 @@ let numeric = confirm('Would you like numeric characters in the password?');
 // creating an array of booleans
 let charType = [special, lowercase, uppercase, numeric];
 
+console.log(charType);
+
 // creating array of strings of potential password characters
 let specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 let lowerChar = 'abcdefghijklmnopqrstuvwxyz';
@@ -50,8 +52,10 @@ function generatePassword(length) {
     }
 }
 
-// calling the function to generate password
+//calling the function to generate password
 generatePassword(length);
+
+passwordEl.style.fontSize = '20px';
 
 // adding event listeners to generate password and copy to clipboard buttons
 buttonEl.addEventListener('click', function() {

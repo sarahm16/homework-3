@@ -18,10 +18,14 @@ let lowercase = confirm('Would you like lowercase letters in the password?');
 let uppercase = confirm('Would you like uppercase characters in the password?');
 let numeric = confirm('Would you like numeric characters in the password?');
 
-// creating an array of booleans
-let charType = [special, lowercase, uppercase, numeric];
+// create an array of booleans that correlates to prompts
+let criteria = [special, lowercase, uppercase, numeric];
 
-console.log(charType);
+// if(critera == [false, false, false, false]) {
+//     alert('please select at least one password criteria');
+// }
+
+console.log(criteria);
 
 // creating array of strings of potential password characters
 let specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
@@ -31,16 +35,18 @@ let numericChar = '0123456789';
 let allCharacters = [specialChar, lowerChar, upperChar, numericChar];
 let string = '';
 
-// adds appropriate string in response to user input
-for(let i = 0; i < charType.length; i++) {
-    if(charType[i] == true) {
+// adds appropriate string of characters in response to user input
+for(let i = 0; i < criteria.length; i++) {
+    if(criteria[i] == true) {
         string = string + allCharacters[i];
     }
 }
 
+console.log(string);
+
 // function that selects random characters from string
 function selectChar(string) {
-    let rand = Math.ceil(Math.random()*string.length);
+    let rand = Math.floor(Math.random()*string.length);
     return string.charAt(rand);
 }
 
@@ -52,17 +58,25 @@ function generatePassword(length) {
     }
 }
 
-//calling the function to generate password
+
+// calls the function to generate password
 generatePassword(length);
 
+// sets font size of password
 passwordEl.style.fontSize = '20px';
 
-// adding event listeners to generate password and copy to clipboard buttons
+// adding event listeners to display password in text area
 buttonEl.addEventListener('click', function() {
     passwordEl.textContent = password;
     passwordEl.style.color = 'teal';
-});
+})
 
+// adds event listener that copies password to clipboard
 copyEl.addEventListener('click', function() {
-
-});
+    const el = document.createElement('textarea');
+    el.value = password;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+})

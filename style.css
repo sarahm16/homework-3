@@ -2,10 +2,10 @@ body {
     background-image: url('circles-light.png');
 }
 
-h1,
-h2 {
+h1 {
     text-align: center;
     color:lightgray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #password {

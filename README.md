@@ -10,4 +10,4 @@ Additionally, the user may click the Copy to Clipboard button. A new element wil
 
 <img src = "./images/browser.png">
 
-<a href = "">
+<a href = "https://github.com/sarahm16/homework-3">Link to GitHub Pages </a>

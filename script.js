@@ -21,11 +21,9 @@ let numeric = confirm('Would you like numeric characters in the password?');
 // create an array of booleans that correlates to prompts
 let criteria = [special, lowercase, uppercase, numeric];
 
-// if(criteria == [false, false, false, false]) {
-//     alert('please select at least one password criteria');
-// }
-
-console.log(criteria);
+if(criteria[0] == false && criteria[1] == false && criteria[2] == false && criteria[3] == false) {
+    alert('please select at least one password criteria');
+}
 
 // creating array of strings of potential password characters
 let specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
@@ -42,8 +40,6 @@ for(let i = 0; i < criteria.length; i++) {
     }
 }
 
-console.log(string);
-
 // function that selects random characters from string
 function selectChar(string) {
     let rand = Math.floor(Math.random()*string.length);
@@ -57,7 +53,6 @@ function generatePassword(length) {
         password = password + selectChar(string);
     }
 }
-
 
 // calls the function to generate password
 generatePassword(length);

@@ -6,7 +6,7 @@ As the user selects criteria for the password, a string is created of those char
 
 Once the user completes all of the prompts, the generatePassword() function is automatically called. When the user clicks on the Generate Password button, an event listener writes the password to the page by assigning the textContent of the element to the password.
 
-Additionally, the user may click the Copy to Clipboard button. A new element will be created and addended to the page which contains the password. The password is selected and copied to the clipboard using execCommand('copy').
+Additionally, the user may click the Copy to Clipboard button. A new element that contains the password will be created and addended to the page. The password is selected and copied to the clipboard using execCommand('copy').
 
 <img src = "./images/browser.png">
 

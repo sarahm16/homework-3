@@ -21,7 +21,7 @@ let numeric = confirm('Would you like numeric characters in the password?');
 // create an array of booleans that correlates to prompts
 let criteria = [special, lowercase, uppercase, numeric];
 
-// if(critera == [false, false, false, false]) {
+// if(criteria == [false, false, false, false]) {
 //     alert('please select at least one password criteria');
 // }
 

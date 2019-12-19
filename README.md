@@ -8,6 +8,6 @@ Once the user completes all of the prompts, the generatePassword() function is a
 
 Additionally, the user may click the Copy to Clipboard button. A new element will be created and addended to the page which contains the password. The password is selected and copied to the clipboard using execCommand('copy').
 
-![application screenshot](./images/browser.png);
+<img src = "./images/browser.png">
 
 <a href = "">
